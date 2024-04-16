@@ -1,0 +1,15 @@
+// schema.prisma
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./botTelegram.db"
+}
+
+model EmailContato {
+  id        Int      @id @default(autoincrement())
+  email     String
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
